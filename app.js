@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
   // console.log('DOM fully loaded and parsed');
-    document.querySelectorAll('td').forEach(cell => cell.addEventListener('click', cellClickHandler));
-    document.getElementById('restartButton').addEventListener('click', restartButtonHandler);
+  document.querySelectorAll('td').forEach(cell => cell.addEventListener('click', cellClickHandler));
+  document.getElementById('restartButton').addEventListener('click', restartButtonHandler);
 });
 
 var state = {
@@ -94,7 +94,7 @@ function checkIfBoardFull() {
 
 
 function handleGameOver() {
-    document.querySelectorAll('td').forEach(cell => cell.removeEventListener('click', cellClickHandler));
+  document.querySelectorAll('td').forEach(cell => cell.removeEventListener('click', cellClickHandler));
 };
 
 
@@ -104,6 +104,7 @@ function restartButtonHandler() {
   state.gameOver = false;
   document.querySelectorAll('td').forEach(cell => cell.addEventListener('click', cellClickHandler));
   header2.innerText = '';
+  header3.innerText = '';
 
   var table = document.getElementById('TttTable');
 
@@ -151,12 +152,12 @@ function restartButtonHandler() {
 
 
 // checkIfBoardFull before refactoring for separation of concerns
-    // var table = document.getElementById('TttTable');
+//     var table = document.getElementById('TttTable');
 
-  // for (var row of table.rows) {
-  //   for (var cell of row.cells) {
-  //     if (cell.innerHTML === '') {
-  //       full = false;
-  //     }
-  //   }
-  // }
+//   for (var row of table.rows) {
+//     for (var cell of row.cells) {
+//       if (cell.innerHTML === '') {
+//         full = false;
+//       }
+//     }
+//   }
